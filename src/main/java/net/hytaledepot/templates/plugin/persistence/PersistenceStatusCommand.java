@@ -33,7 +33,7 @@ public final class PersistenceStatusCommand extends AbstractCommand {
   @Override
   protected CompletableFuture<Void> execute(CommandContext ctx) {
     state.incrementStatusRequests();
-    String sender = String.valueOf(ctx.sender().getDisplayName());
+    String sender = String.valueOf(ctx.sender().getUsername());
 
     String line =
         "[Persistence] lifecycle="
